@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Stackoverflow I feel lucky</title>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<form action="#">
+    <input type="text">
+    <input type="submit" value="I feel lucky.">
+</form>
+
+<script>
+    $('form').submit(function () {
+        var input = $('input[type="text"]').val();
+        var link = 'https://duckduckgo.com/?q=!ducky+' + input + '+site%3Astackoverflow.com';
+        window.location = link;
+        return false;
+    });
+</script>
+</body>
+</html>
